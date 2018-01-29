@@ -1,0 +1,94 @@
+<nav id="navbar-example2" class="navbar navbar-expand-lg navbar-dark  bg-danger sticky-top font-weight-bold text-uppercase border-bottom border-light">
+  <a class="navbar-brand" href="https://github.com/ngx-rocket" translate>APP_NAME</a>
+  <button class="navbar-toggler" type="button" aria-controls="navbar-menu" aria-label="Toggle navigation" (click)="toggleMenu()"
+    [attr.aria-expanded]="!menuHidden">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div id="navbar-menu" class="collapse navbar-collapse float-xs-nonet" [ngbCollapse]="menuHidden">
+    <ul class="navbar-nav">
+      <li>
+        <a class="nav-item nav-link" routerLink="/home" href="#home" [ngx-scroll-to]="'#home'" [ngx-scroll-to-event]="ngxScrollToEvent"
+          [ngx-scroll-to-duration]="ngxScrollToDuration" [ngx-scroll-to-easing]="ngxScrollToEasing" [ngx-scroll-to-offset-map]="ngxScrollToOffsetMap"
+          routerLinkActive="active">
+          <span translate>Home</span>
+        </a>
+      </li>
+
+      <li>
+        <a class="nav-item nav-link" href="#skills" [ngx-scroll-to]="'#skills'" [ngx-scroll-to-event]="ngxScrollToEvent" [ngx-scroll-to-duration]="ngxScrollToDuration"
+          [ngx-scroll-to-easing]="ngxScrollToEasing" [ngx-scroll-to-offset-map]="ngxScrollToOffsetMap" routerLinkActive="active">
+          <span translate>Skills</span>
+        </a>
+      </li>
+
+      <li>
+        <a class="nav-item nav-link" routerLink="/home#experience" href="#experience" [ngx-scroll-to]="'#experience'" [ngx-scroll-to-event]="ngxScrollToEvent"
+          [ngx-scroll-to-duration]="ngxScrollToDuration" [ngx-scroll-to-easing]="ngxScrollToEasing" [ngx-scroll-to-offset-map]="ngxScrollToOffsetMap"
+          routerLinkActive="active">
+          <span translate>Experience</span>
+        </a>
+      </li>
+
+      <li>
+        <a class="nav-item nav-link" routerLink="/home#education" href="#education" [ngx-scroll-to]="'#education'" [ngx-scroll-to-event]="ngxScrollToEvent"
+          [ngx-scroll-to-duration]="ngxScrollToDuration" [ngx-scroll-to-easing]="ngxScrollToEasing" [ngx-scroll-to-offset-map]="ngxScrollToOffsetMap"
+          routerLinkActive="active">
+          <span translate>Education</span>
+        </a>
+      </li>
+
+      <li>
+        <a class="nav-item nav-link" routerLink="/home" href="#portfolio" [ngx-scroll-to]="'#portfolio'" [ngx-scroll-to-event]="ngxScrollToEvent"
+          [ngx-scroll-to-duration]="ngxScrollToDuration" [ngx-scroll-to-easing]="ngxScrollToEasing" [ngx-scroll-to-offset-map]="ngxScrollToOffsetMap"
+          routerLinkActive="active">
+          <span translate>Portfolio</span>
+        </a>
+      </li>
+
+      <li>
+        <a class="nav-item nav-link" routerLink="/home" href="#contact" [ngx-scroll-to]="'#contact'" [ngx-scroll-to-event]="ngxScrollToEvent"
+          [ngx-scroll-to-duration]="ngxScrollToDuration" [ngx-scroll-to-easing]="ngxScrollToEasing" [ngx-scroll-to-offset-map]="ngxScrollToOffsetMap"
+          outerLinkActive="active">
+          <span translate>Contact</span>
+        </a>
+      </li>
+
+    </ul>
+
+
+    <div class="navbar-nav ml-auto">
+      <div class="nav-item dropdown" ngbDropdown placement="bottom-right">
+        <a href="javascript:void(0)" class="nav-link" ngbDropdownToggle>
+          <i class="fa fa-language"></i> {{ 'language' | translate }}
+          <b class="caret"></b>
+        </a>
+        <div ngbDropdownMenu aria-labelledby="language-dropdown">
+          <button class="dropdown-item" (click)="changeLang('en')">
+            <span translate>English</span>
+          </button>
+          <div class="dropdown-divider"></div>
+          <button class="dropdown-item" (click)="changeLang('fr')">
+            <span translate>French</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="nav-item" ngbDropdown placement="bottom-right">
+        <a id="user-dropdown" class="nav-link" ngbDropdownToggle>
+          <i class="fa fa-free-code-camp"> </i>{{ 'About' | translate }}
+          <b class="caret"></b>
+        </a>
+        <div ngbDropdownMenu aria-labelledby="user-dropdown">
+          <h6 class="dropdown-header">
+            <span translate>Architecture:</span>
+            <b>Angular 5</b>
+          </h6>
+          <div class="dropdown-divider"></div>
+          <button class="dropdown-item" translate>Bootstrap 4 Sass, JavaScript</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+

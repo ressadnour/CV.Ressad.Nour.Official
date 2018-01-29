@@ -3,3 +3,71 @@
  * Framework overrides and customization goes here.
  */
 
+@import "src/theme/theme-variables";
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+}
+
+section {
+  padding: 45px;
+}
+
+.section:nth-child(even) {
+  background-color: $red;
+  color: $white;
+}
+
+.red-devider
+{
+    width:100px;
+    height: 2px;
+    background: $red;
+    margin: 0 auto;
+}
+.white-devider
+{
+    width:100px;
+    height: 2px;
+    background: $white;
+    margin: 0 auto;
+}
+.section:nth-child(odd) {
+  color: $red;
+}
+
+
+.heading h1 {
+  text-transform: uppercase;
+  margin: 20px 10px;
+}
+
+.heading {
+  text-align: center;
+ 
+}
+
+.red-heading, .white-heading {
+  text-align: center;
+  text-transform: uppercase;
+  margin: 10px auto;
+}
+
+
+.progress-bar {
+  background:  $red;
+ } 
+
+
+ .caption
+{
+    color:$white; 
+    text-align: center;
+}
+
+
+

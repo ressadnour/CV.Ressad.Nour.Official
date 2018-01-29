@@ -1,7 +1,7 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "project": {
-    "name": "cv-ressad-nour-official"
+    "name": "cv.ressad.nour"
   },
   "apps": [
     {
@@ -9,13 +9,10 @@
       "outDir": "dist",
       "assets": [
         "assets",
-        "favicon.ico",
-        "manifest.json",
-        "robots.txt"
+        "favicon.ico"
       ],
       "index": "index.html",
       "main": "main.ts",
-      "serviceWorker": true,
       "polyfills": "polyfills.ts",
       "test": "test.ts",
       "tsconfig": "tsconfig.app.json",
@@ -57,7 +54,7 @@
     }
   },
   "defaults": {
-    "styleExt": "scss",
+    "styleExt": "css",
     "component": {}
   }
 }

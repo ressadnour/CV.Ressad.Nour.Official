@@ -1,0 +1,17 @@
+
+.thumbnail
+{
+    width: 100%;
+    height: 100%;
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%); 
+}
+.img-thumbnail {
+    margin: 0 auto;
+}
+.thumbnail img:hover
+{
+     filter: none;
+    -webkit-filter: none; 
+}
+

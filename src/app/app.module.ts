@@ -1,34 +1,59 @@
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
-import { TranslateModule } from '@ngx-translate/core';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 
 import { AppComponent } from './app.component';
-import { AppRoutingModule } from './app-routing.module';
+import { HeaderComponent } from './header/header.component';
+import { SkillsComponent } from './skills/skills.component';
+import { AboutComponent } from './about/about.component';
+import { ExperienceComponent } from './experience/experience.component';
+import { EducationComponent } from './education/education.component';
+import { PortfolioComponent } from './portfolio/portfolio.component';
+import { ContactComponent } from './contact/contact.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
 
-import { CoreModule } from './core/core.module';
-import { SharedModule } from './shared/shared.module';
-import { HomeModule } from './home/home.module';
-import { AboutModule } from './about/about.module';
+
+import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+import { TranslateModule } from '@ngx-translate/core';
+import { TranslateLoader } from '@ngx-translate/core';
+import { HomeComponent } from './home/home.component';
+
+// AoT requires an exported function for factories
+export function HttpLoaderFactory(httpClient: HttpClient) {
+  return new TranslateHttpLoader(httpClient, './assets/i18n/', '.json');
+}
 
 @NgModule({
+  declarations: [
+    AppComponent,
+    HeaderComponent,
+    SkillsComponent,
+    AboutComponent,
+    ExperienceComponent,
+    EducationComponent,
+    PortfolioComponent,
+    ContactComponent,
+    HomeComponent
+  ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule,
-    TranslateModule.forRoot(),
+    ReactiveFormsModule,
+    HttpClientModule,
     NgbModule.forRoot(),
-    CoreModule,
-    SharedModule,
-    HomeModule,
-    AboutModule,
-    AppRoutingModule
+    ScrollToModule.forRoot(),
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+      }
+    })
   ],
-  declarations: [AppComponent],
-  providers: [
-  ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
