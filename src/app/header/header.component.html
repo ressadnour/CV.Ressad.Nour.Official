@@ -1,23 +1,23 @@
-<nav id="navbar-example2" class="navbar navbar-expand-lg navbar-dark  bg-danger sticky-top font-weight-bold text-uppercase border-bottom border-light">
-  <a class="navbar-brand" href="https://github.com/ngx-rocket" translate>APP_NAME</a>
-  <button class="navbar-toggler" type="button" aria-controls="navbar-menu" aria-label="Toggle navigation" (click)="toggleMenu()"
+<nav id="navbar-example2" class="navbar navbar-expand-lg navbar-dark bg-danger sticky-top font-weight-bold text-uppercase border-bottom border-light">
+   <button class="navbar-toggler" type="button" aria-controls="navbar-menu" aria-label="Toggle navigation" (click)="toggleMenu()"
     [attr.aria-expanded]="!menuHidden">
     <span class="navbar-toggler-icon"></span>
   </button>
+  <a class="navbar-brand" href="https://github.com/ressadnour/CV.Ressad.Nour.Official" translate>APP_NAME</a>
 
   <div id="navbar-menu" class="collapse navbar-collapse float-xs-nonet" [ngbCollapse]="menuHidden">
     <ul class="navbar-nav">
       <li>
         <a class="nav-item nav-link" routerLink="/home" href="#home" [ngx-scroll-to]="'#home'" [ngx-scroll-to-event]="ngxScrollToEvent"
           [ngx-scroll-to-duration]="ngxScrollToDuration" [ngx-scroll-to-easing]="ngxScrollToEasing" [ngx-scroll-to-offset-map]="ngxScrollToOffsetMap"
-          routerLinkActive="active">
+         >
           <span translate>Home</span>
         </a>
       </li>
 
       <li>
         <a class="nav-item nav-link" href="#skills" [ngx-scroll-to]="'#skills'" [ngx-scroll-to-event]="ngxScrollToEvent" [ngx-scroll-to-duration]="ngxScrollToDuration"
-          [ngx-scroll-to-easing]="ngxScrollToEasing" [ngx-scroll-to-offset-map]="ngxScrollToOffsetMap" routerLinkActive="active">
+          [ngx-scroll-to-easing]="ngxScrollToEasing" [ngx-scroll-to-offset-map]="ngxScrollToOffsetMap" >
           <span translate>Skills</span>
         </a>
       </li>
@@ -74,18 +74,27 @@
         </div>
       </div>
 
-      <div class="nav-item" ngbDropdown placement="bottom-right">
+      <div id="About" class="nav-item" ngbDropdown placement="bottom-right">
         <a id="user-dropdown" class="nav-link" ngbDropdownToggle>
           <i class="fa fa-free-code-camp"> </i>{{ 'About' | translate }}
           <b class="caret"></b>
         </a>
-        <div ngbDropdownMenu aria-labelledby="user-dropdown">
-          <h6 class="dropdown-header">
-            <span translate>Architecture:</span>
-            <b>Angular 5</b>
-          </h6>
-          <div class="dropdown-divider"></div>
-          <button class="dropdown-item" translate>Bootstrap 4 Sass, JavaScript</button>
+        <div ngbDropdownMenu aria-labelledby="user-dropdown" style="margin:0; padding:0;">
+          <div class="dropdown-header p-1 m-1" > 
+            <div class="card text-center bg-danger">
+                <div class="card-body p-1 m-1 ">
+                  <p class="card-text">
+                      <font style="font-size:18px" >Angular 5</font>
+                      <font style="font-size:10px" >HTML 5</font>
+                      <font style="font-size:12px" >CSS</font>
+                      <font style="font-size:10px" >SASS</font>
+                      <font style="font-size:18px" >Bootstrap 4</font>
+                      <font style="font-size:12px" >JavaScript</font>
+                      <font style="font-size:18px" >Progressive Web Application</font>
+                     </p>
+                </div>
+              </div>
+            </div> 
         </div>
       </div>
     </div>
