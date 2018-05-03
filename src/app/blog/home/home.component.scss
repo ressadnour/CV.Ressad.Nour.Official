@@ -1,0 +1,29 @@
+@import "src/theme/theme-variables";
+
+mat-drawer-container, mat-drawer, mat-drawer-content {
+  height: 100%;
+  margin: 10px;
+  background: $white;
+}
+
+mat-drawer {
+  margin: 10px; 
+  padding: 10px;
+  height: 100%;
+}
+.side-bar {
+  height: 100%;
+
+}
+
+.mat-list-item {
+  padding: 0px;
+}
+
+.link-text {
+
+
+}
+
+
+  

@@ -1,0 +1,160 @@
+<mat-sidenav-container>
+  <mat-sidenav #sidenav role="navigation">
+    <mat-nav-list>
+      <a pageScroll mat-list-item [routerLink]="" routerLinkActive="active"  href="#home" 
+        (click)="sidenav.close()">
+        <span translate>Home</span>
+      </a>
+      <a pageScroll mat-list-item [routerLink]="" routerLinkActive="active" href="#skills" 
+        (click)="sidenav.close()">
+        <span translate>Skills</span>
+      </a>
+      <a pageScroll mat-list-item [routerLink]="" routerLinkActive="active"  href="#experience" 
+        (click)="sidenav.close()">
+        <span translate>Experience</span>
+      </a>
+      <a pageScroll mat-list-item [routerLink]="" routerLinkActive="active" href="#education" 
+        (click)="sidenav.close()">
+        <span translate>Education</span>
+      </a>
+      <a pageScroll mat-list-item [routerLink]="" routerLinkActive="active" href="#portfolio" 
+        (click)="sidenav.close()">
+        <span translate>Portfolio</span>
+      </a>
+      <a pageScroll mat-list-item [routerLink]="" routerLinkActive="active" href="#contact" 
+        (click)="sidenav.close()">
+        <span translate>Contact</span>
+      </a>
+    </mat-nav-list>
+  </mat-sidenav> 
+
+  <mat-sidenav-content >
+    <mat-toolbar class="bg-danger border-bottom border-top border-light sticky-top" id="mat-toolbar">
+      <div fxHide.gt-sm>
+        <button class="nav-link"  mat-icon-button (click)="sidenav.toggle()">
+          <mat-icon>menu</mat-icon>
+        </button>
+      </div>
+      <div>
+        <a class="navbar-brand nav-link" href="https://github.com/ressadnour/CV.Ressad.Nour.Official">
+          <span translate>APP_NAME</span>
+        </a>
+      </div>
+      <div>
+        <ul fxLayout fxLayoutGap="10px" class="navigation-items" fxHide.lt-md>
+          <li>
+            <a class="nav-link" pageScroll [routerLink]="" routerLinkActive="active" href="#home" >
+              <span translate>Home</span>
+            </a>
+          </li>
+
+          <li>
+            <a class="nav-link" pageScroll [routerLink]="" routerLinkActive="active" href="#skills" >
+              <span translate>Skills</span>
+            </a>
+          </li>
+
+          <li>
+            <a class="nav-link" pageScroll  [routerLink]="" routerLinkActive="active" href="#experience" >
+              <span translate>Experience</span>
+            </a>
+          </li>
+
+          <li>
+            <a class="nav-link" pageScroll [routerLink]="" routerLinkActive="active" href="#education" >
+              <span translate>Education</span>
+            </a>
+          </li>
+
+          <li>
+            <a class="nav-link" pageScroll [routerLink]="" routerLinkActive="active" href="#portfolio" >
+              <span translate>Portfolio</span>
+            </a>
+          </li>
+
+          <li>
+            <a class="nav-link" pageScroll [routerLink]="" routerLinkActive="active" href="#contact"  >
+              <span translate>Contact</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div fxFlex></div>
+      <div>
+        <ul fxLayout fxLayoutGap="10px" class="navigation-items" fxHide.lt-md>
+          <li>
+             <a class="nav-link mr-5 pr-5" mat-icon-button [matMenuTriggerFor]="menu" >
+              {{ 'language' | translate }}
+                <mat-icon>arrow_drop_down</mat-icon>
+            </a>
+            <mat-menu #menu="matMenu" class="bg-danger text-white border-light pt-0 mt-1">
+              <a class="nav-link" mat-menu-item (click)="changeLang('en')">
+                <span translate>English</span>
+              </a>
+              <a class="nav-link" mat-menu-item (click)="changeLang('fr')">
+                <span translate>French</span>
+              </a>
+            </mat-menu>
+         </li>
+
+
+          <li>
+            <a class="nav-link mr-5 pr-5" mat-icon-button [matMenuTriggerFor]="cardManu">
+              {{ 'About' | translate }}
+                <mat-icon>arrow_drop_down</mat-icon>
+            </a>
+            <mat-menu #cardManu="matMenu" class="text-center bg-danger text-white">
+                  <p >
+                    <font style="font-size:18px">Angular 5</font>
+                    <font style="font-size:10px">HTML 5</font>
+                    <font style="font-size:12px">CSS</font>
+                    <font style="font-size:10px">SASS</font>
+                    <font style="font-size:18px">Bootstrap 4</font>
+                    <font style="font-size:12px">JavaScript</font>
+                    <font style="font-size:18px">Progressive Web Application</font>
+                  </p>
+              </mat-menu>
+          </li>
+        </ul>
+      </div>
+    </mat-toolbar>
+
+    <div fxLayout="column"  fxLayoutAlign="space-around center" fxLayoutGap="20px" >
+     <div></div>
+      <div id="home" class="section-mat">
+        <app-home></app-home>
+      </div>
+      <div id="skills" class="section-mat">
+        <app-skills></app-skills>
+      </div>
+      <div id="experience" class="section-mat">
+        <app-experience></app-experience>
+      </div>
+      <div id="education" class="section-mat">
+        <app-education></app-education>
+      </div>
+      <div id="portfolio" class="section-mat">
+        <app-portfolio></app-portfolio>
+      </div>
+      <div id="contact" class="section-mat">
+        <app-contact></app-contact>
+      </div>
+      
+      <footer class="text-center">
+          <a pageScroll  [routerLink]="" routerLinkActive="active"   href="#home">
+              <mat-icon>keyboard_arrow_up</mat-icon>
+            </a>
+            <h5>© 2018 Ressad Nour.</h5>
+      </footer>
+
+      <app-go-top-button>
+          <mat-icon>arrow_upward</mat-icon>
+       </app-go-top-button>
+
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+
+
+

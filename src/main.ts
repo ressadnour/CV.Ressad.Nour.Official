@@ -1,6 +1,6 @@
 import { enableProdMode } from '@angular/core';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
-
+import 'hammerjs';
 import { AppModule } from './app/app.module';
 import { environment } from './environments/environment';
 
@@ -11,7 +11,7 @@ if (environment.production) {
 platformBrowserDynamic()
   .bootstrapModule(AppModule)
   .then(() => {
-    registerServiceWorker('sw-default')
+    registerServiceWorker('sw-default');
   });
 
 function registerServiceWorker(swName: string) {
@@ -28,3 +28,4 @@ function registerServiceWorker(swName: string) {
     console.error('[App] Service Worker API is not supported in current browser');
   }
 }
+

@@ -1,23 +1,29 @@
-import { Component } from '@angular/core';
-import { routerTransition } from './router.animations';
+import { Component, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
+import { FormBuilder } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
-  animations: [routerTransition()]
+  styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
-  title = 'app';
 
-  APP_NAME = 'Ressad Nour CV';
-  constructor(private translate: TranslateService) {
+export class AppComponent implements OnInit {
+  public theme: string;
+  public matButtonToggleGroup: string;
 
-    translate.addLangs(["en", "fr"]);
-    translate.setDefaultLang('fr');
+  constructor(private translate: TranslateService, private formBuilder: FormBuilder, private router: Router) {
+  }
 
-    const browserLang = translate.getBrowserLang();
-    translate.use(browserLang.match(/en|fr/) ? browserLang : 'fr');
-}
+  ThemeSelected(theme: string) {
+    this.theme = theme;
+    this.router.navigate(['/' + this.theme]);
+  }
+
+  ngOnInit() {
+    this.theme = 'blog';
+    this.router.navigate(['/' + this.theme]);
+    this.translate.setDefaultLang('fr');
+  }
 }

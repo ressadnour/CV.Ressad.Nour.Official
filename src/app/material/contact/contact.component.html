@@ -1,0 +1,41 @@
+<div class="red-devider"> </div>
+<div class="red-heading">
+  <h2>
+    <span translate>Contact</span>
+  </h2>
+</div>
+
+<mat-card style="min-width: 700px;">
+  <form fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="10px">
+
+
+    <mat-form-field fxFill="70%">
+      <input type="text" matInput placeholder="Your name">
+      <mat-hint>Please enter your name.</mat-hint>
+      <mat-error>Invalid or missing name.</mat-error>
+    </mat-form-field>
+
+
+    <mat-form-field fxFill="70%">
+      <input type="email" matInput placeholder="Your email">
+      <mat-hint>Please enter a valid email.</mat-hint>
+      <mat-error>Invalid or missing email.</mat-error>
+    </mat-form-field>
+
+    <mat-form-field fxFill="70%">
+      <input type="text" matInput placeholder="Your subject">
+      <mat-hint>Please enter a valid subject.</mat-hint>
+      <mat-error>Invalid or missing subject.</mat-error>
+    </mat-form-field>
+
+
+
+    <mat-form-field fxFill="70%">
+      <textarea type="text" matInput placeholder="Your message"></textarea>
+      <mat-hint>Please enter a valid message.</mat-hint>
+      <mat-error>Invalid or missing message.</mat-error>
+    </mat-form-field>
+    <button type="submit" mat-raised-button color="primary">Submit</button>
+
+  </form>
+</mat-card>

@@ -1,0 +1,12 @@
+@import "../theme/theme-variables";
+.mat-button-toggle-style {
+     background: $red;
+     color: $white;
+     height: 35px;
+   }
+  
+.mat-button-toggle-style-checked {
+  background: $white;
+  color: $red;
+  height: 35px;
+}

@@ -1,0 +1,138 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-danger border-bottom border-top border-light sticky-top"> 
+  <button class="navbar-toggler" type="button" aria-controls="navbar-menu" aria-label="Toggle navigation" (click)="toggleMenu()"
+    [attr.aria-expanded]="!menuHidden">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" href="https://github.com/ressadnour/CV.Ressad.Nour.Official"><span translate>APP_NAME</span></a>
+
+  <div id="navbar-menu" class="collapse navbar-collapse float-xs-nonet" [ngbCollapse]="menuHidden">
+    <ul class="navbar-nav">
+      <li>
+        <a  pageScroll class="nav-item nav-link" 
+            [routerLink]="" routerLinkActive="active" 
+            href="#home" >
+          <span translate>Home</span>
+        </a>
+      </li>
+
+      <li>
+        <a  pageScroll class="nav-item nav-link" 
+            [routerLink]="" routerLinkActive="active" 
+            href="#skills">
+            <span translate>Skills</span>
+        </a>
+      </li>
+
+      <li>
+        <a  pageScroll class="nav-item nav-link" 
+            [routerLink]="" routerLinkActive="active" 
+            href="#experience" >
+          <span translate>Experience</span>
+        </a>
+      </li>
+
+      <li>
+        <a  pageScroll class="nav-item nav-link"
+            [routerLink]="" routerLinkActive="active" 
+            href="#education">
+          <span translate>Education</span>
+        </a>
+      </li>
+
+      <li>
+        <a  pageScroll class="nav-item nav-link" [routerLink]=""
+            routerLinkActive="active" 
+            href="#portfolio" >
+          <span translate>Portfolio</span>
+        </a>
+      </li>
+
+      <li>
+        <a  pageScroll class="nav-item nav-link" [routerLink]="" 
+            routerLinkActive="active" href="#contact" >
+          <span translate>Contact</span>
+        </a>
+      </li>
+    </ul>
+
+
+    <div class="navbar-nav ml-auto">
+      <div ngbDropdown placement="bottom-right">
+        <a href="javascript:void(0)" class="nav-link nav-format text-white" ngbDropdownToggle>
+          {{ 'language' | translate }}
+          <b class="caret"></b>
+        </a>
+        <div ngbDropdownMenu class="bg-danger text-white border-light pt-0 mt-1" >
+          <button class="dropdown-item button-format" (click)="changeLang('en')">
+            <span translate>English</span>
+          </button>
+         
+          <button class="dropdown-item button-format" (click)="changeLang('fr')">
+            <span translate>French</span>
+          </button>
+        </div>
+      
+      </div>
+
+
+
+
+
+      <div class="nav-item" ngbDropdown placement="bottom-right">
+        <a id="user-dropdown" class="nav-link nav-format text-white" ngbDropdownToggle>
+         {{ 'About' | translate  }}
+          <b class="caret"></b>
+        </a>
+        <div ngbDropdownMenu aria-labelledby="user-dropdown" class="border-light p-0 mt-1">
+          <div class="dropdown-header p-0">
+            <div class="card text-center bg-danger text-white">
+              <div class="card-body p-1 m-1">
+                <p class="card-text">
+                  <font style="font-size:18px">Angular 5</font>
+                  <font style="font-size:10px">HTML 5</font>
+                  <font style="font-size:12px">CSS</font>
+                  <font style="font-size:10px">SASS</font>
+                  <font style="font-size:18px">Bootstrap 4</font>
+                  <font style="font-size:12px">JavaScript</font>
+                  <font style="font-size:18px">Progressive Web Application</font>
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div id="home" class="section">
+  <app-home></app-home>
+</div>
+<div id="skills" class="section">
+  <app-skills></app-skills>
+</div>
+<div id="experience" class="section">
+  <app-experience></app-experience>
+</div>
+<div id="education" class="section">
+  <app-education></app-education>
+</div>
+<div id="portfolio" class="section">
+  <app-portfolio></app-portfolio>
+</div>
+<div id="contact" class="section">
+  <app-contact></app-contact>
+</div>
+<footer class="text-center">
+    <a pageScroll  [routerLink]="" routerLinkActive="active"   href="#home">
+      <span class="fa fa-chevron-up"></span>
+    </a>
+    <h5>© 2018 Ressad Nour</h5>
+</footer>
+<div>
+    <app-go-top-button>
+      <i class="fa fa-arrow-up"> </i>
+    </app-go-top-button>
+  </div>
+  

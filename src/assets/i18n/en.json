@@ -6,10 +6,12 @@
   "Education": "Education",
   "Portfolio": "Portfolio",
   "Contact": "Contact",
-  "language": "language",
+  "language": "Language",
   "English": "English",
   "About": "About the site",
   "Hello, I'm Nour": "Hello, I'm Nour",
   "Full Stack Developer":"Full Stack Developer",
-  "Download CV":"Download CV"
+  "Download CV":"Download CV",
+  "Bootstrap": "Bootstrap 4",
+  "Blog Home": "Home"
 }

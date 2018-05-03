@@ -1,0 +1,19 @@
+@import "src/theme/theme-variables";
+@import "~bootstrap/scss/bootstrap";
+.button-format {
+    background-color:$red;
+    color: $white;
+}
+
+.button-format:hover {
+    background-color:$white;
+    color:$red;
+}
+
+.nav-link {
+    color: $white!important; 
+}
+
+.nav-link:hover, .nav-link:active {
+    color: lightcoral!important;
+  }

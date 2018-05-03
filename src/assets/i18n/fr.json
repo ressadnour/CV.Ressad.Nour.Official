@@ -3,15 +3,18 @@
   "Home": "Moi",
   "Skills": "Compétences",
   "Experience": "Expérience",
-  "Education": "éducation",
+  "Education": "Education",
   "Portfolio": "Portfolio",
   "Contact": "Contact",
-  "language": "langue",
-  "About": "à propos",
+  "language": "Langue",
+  "About": "À propos",
   "English": "Anglais",
   "French": "Français",
   "Version": "Version",
   "Hello, I'm Nour": "Bonjour, C'est moi Nour",
   "Full Stack Developer":"Développeur Full Stack",
-  "Download CV":"Télécharger mon CV"
+  "Download CV":"Télécharger mon CV",
+  "Bootstrap": "Bootstrap 4",
+  "Blog Home": "Home"
+  
 }

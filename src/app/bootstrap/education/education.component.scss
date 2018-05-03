@@ -1,0 +1,44 @@
+.card {
+    margin: 20px;
+    height: 95%;
+  }
+  
+  .education-block {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 30px;
+    background: rgb(121, 117, 117);
+    border-radius: 10px;
+    border: 2px solid #ccc;
+    margin-bottom: 20px;
+  }
+  
+  h5 {
+    color: #888;
+    font-size: 15px;
+    margin-bottom: 15px;
+  }
+  
+  .education-block fa {
+    font-size: 40px;
+  }
+  
+  .card-body>h4,
+  p {
+    margin-bottom: 20px;
+    color: black;
+  }
+  
+  .education-block p {
+    font-weight: bold;
+  }
+  
+  @media all and (max-width: 600px) {
+    section {
+      margin: auto 0;
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+  

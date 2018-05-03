@@ -1,0 +1,6 @@
+<button  type="button" aria-label="go to top of page" class="go-top-button"
+                        [@appearInOut]="animationState"
+                        (click)="scrollTop($event)"
+                        [ngStyle]="getStyle()">
+                        <ng-content></ng-content>
+                </button>

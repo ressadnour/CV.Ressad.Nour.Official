@@ -1,30 +1,8 @@
-<app-header ></app-header>
-<div class="section">
-    <app-home></app-home>
-</div>
-<div class="section">
-    <app-skills></app-skills>
-</div>
-<div class="section">
-    <app-experience></app-experience>
-</div>
-<div class="section">
-    <app-education></app-education>
-</div>
-<div class="section">
-    <app-portfolio></app-portfolio>
-</div>
-<div class="section">
-    <app-contact></app-contact>
-</div>
-<!-- <div class="section">
-    <app-about></app-about>
-</div> -->
-
-<footer class="text-center">
-        <a href="#home">
-            <span class="fa fa-chevron-up"></span>
-        </a>
-        <h5>© 2018 Ressad Nour</h5>
-</footer> 
-
+<div class="mainlayout"  fxLayout="row" fxLayoutAlign="center center">
+    <mat-button-toggle-group  style="margin: 10px;" >
+        <mat-button-toggle class="mat-button-toggle-style" [routerLink]="['\bootstrap']"   routerLinkActive="mat-button-toggle-style-checked" (click)="ThemeSelected('bootstrap')"><span translate>Bootstrap</span></mat-button-toggle>
+        <mat-button-toggle class="mat-button-toggle-style" [routerLink]="['\material']"    routerLinkActive="mat-button-toggle-style-checked" (click)="ThemeSelected('material')"><span translate>Material</span></mat-button-toggle>
+        <mat-button-toggle class="mat-button-toggle-style" [routerLink]="['\blog']"        routerLinkActive="mat-button-toggle-style-checked" (click)="ThemeSelected('blog')"><span translate>Blog</span></mat-button-toggle>
+    </mat-button-toggle-group>
+</div> 
+<router-outlet></router-outlet>

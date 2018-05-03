@@ -1,0 +1,26 @@
+@import "src/theme/theme-variables";
+
+mat-sidenav-container, mat-sidenav, mat-sidenav-content {
+  height: 100%;
+}
+
+.mat-sidenav {
+  width: 250px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: white
+}
+
+.nav-link :hover, .nav-link :active {
+  color: lightcoral;
+}
+
+.navigation-items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+

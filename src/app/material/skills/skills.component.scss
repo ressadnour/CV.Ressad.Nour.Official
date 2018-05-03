@@ -1,0 +1,21 @@
+@import "../../../theme/theme-variables.scss";
+
+.card {
+    color: $white;
+    text-transform: capitalize;
+    margin-top: 20px;
+  }
+  
+  .mat-card {
+      margin: 2px;
+  }
+
+  mat-progress-bar {
+      height: 10px;
+  }
+
+  .mat-card-title {
+      color: $red;
+      font-size: 18px;
+  }
+   

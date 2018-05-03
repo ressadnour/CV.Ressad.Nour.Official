@@ -1,0 +1,67 @@
+<mat-sidenav-container>
+  <mat-sidenav #sidenav role="navigation">
+    <mat-nav-list>
+      <a pageScroll mat-list-item [routerLink]="" routerLinkActive="active" href="#home" (click)="sidenav.close()">
+        <span translate>Home</span>
+      </a>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content style="padding: 0px; margin: 0px;">
+    <mat-toolbar class="bg-danger border-bottom border-top border-light sticky-top" id="mat-toolbar">
+      <div fxHide.gt-sm>
+        <button class="nav-link" mat-icon-button (click)="sidenav.toggle()">
+          <mat-icon>menu</mat-icon>
+        </button>
+      </div>
+      <div>
+        <a class="navbar-brand nav-link" href="https://github.com/ressadnour/CV.Ressad.Nour.Official">
+          <span translate>APP_NAME</span>
+        </a>
+      </div>
+      <div>
+        <ul fxLayout fxLayoutGap="10px" class="navigation-items" fxHide.lt-md>
+          <li>
+            <a pageScroll class="nav-link" [routerLink]="" routerLinkActive="active" href="#home">
+              <span translate>Blog Home</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div fxFlex></div>
+      <div>
+        <ul fxLayout fxLayoutGap="10px" class="navigation-items" fxHide.lt-md>
+          <li>
+            <a class="nav-link mr-5 pr-5" mat-icon-button [matMenuTriggerFor]="menu">
+              {{ 'language' | translate }}
+              <mat-icon>arrow_drop_down</mat-icon>
+            </a>
+            <mat-menu #menu="matMenu" class="bg-danger text-white border-light pt-0 mt-1">
+              <a class="nav-link" mat-menu-item (click)="changeLang('en')">
+                <span translate>English</span>
+              </a>
+              <a class="nav-link" mat-menu-item (click)="changeLang('fr')">
+                <span translate>French</span>
+              </a>
+            </mat-menu>
+          </li>
+        </ul>
+      </div>
+    </mat-toolbar>
+    <div fxLayout="column" fxLayoutAlign="start center" >
+        <mat-card><app-home></app-home></mat-card>
+    
+        <footer class="text-center">
+        <a pageScroll [routerLink]="" routerLinkActive="active" href="#home">
+          <mat-icon>keyboard_arrow_up</mat-icon>
+        </a>
+        <h5>© 2018 Ressad Nour.</h5>
+      </footer>
+
+      <app-go-top-button>
+        <mat-icon>arrow_upward</mat-icon>
+      </app-go-top-button>
+    </div>
+  </mat-sidenav-content>
+
+</mat-sidenav-container>
